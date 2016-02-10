@@ -53,8 +53,8 @@
 	    this.cards = [];
 	    this.weapons = [];
 	
-	    this.addCards();
-	    this.addWeapons();
+	    // this.addCards();
+	    // this.addWeapons();
 	  };
 	
 	  Game.prototype.add = function (object, posId) {

@@ -30,12 +30,15 @@
     <h1>Happy Valentines Day!</h1>
     <canvas id="canvas" width="800" height="600"></canvas>
     <h2>Press "space" to start!</h2>
+    <script type="application/javascript" src="js/game.js"></script>
+    <script type="application/javascript" src="js/gameView.js"></script>
     <script>
       (function () {
         var canvas = document.getElementById("canvas");
         var ctx = canvas.getContext("2d");
 
         var game = new Kaykay.Game();
+        new Kaykay.GameView(game, ctx).bindStart();
       })();
     </script>
   </body>
