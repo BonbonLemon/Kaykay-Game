@@ -9,9 +9,34 @@
         margin: 0 auto;
         text-align: center;
       }
+      h2 {
+        position: relative;
+        background: rgba(200, 200, 200, 0.7);
+        text-align: center;
+        left: 50%;
+        margin-left: -165px;
+        margin-top: -370px;
+        width: 250px;
+        padding: 40px;
+      }
+      canvas {
+        background: #ff66cc;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
     <h1>Happy Valentines Day!</h1>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <h2>Press "space" to start!</h2>
+    <script>
+      (function () {
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        var game = new Kaykay.Game();
+      })();
+    </script>
   </body>
 </html>

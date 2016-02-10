@@ -1,6 +1,6 @@
 module.exports = {
   context: __dirname,
-  entry: "./js/main.js",
+  entry: "./js/game.js",
   output: {
     path: "./js",
     publicPath: "/js/",
