@@ -53,7 +53,7 @@
 	    this.cards = [];
 	    this.weapons = [];
 	
-	    // this.addCards();
+	    this.kay = new Kaykay.Kay(this);
 	    // this.addWeapons();
 	  };
 	
@@ -65,17 +65,6 @@
 	    } else {
 	      throw "wtf?";
 	    }
-	  };
-	
-	  Game.prototype.addCards = function () {
-	    var x = 0;
-	    var intervalID = setInterval(function () {
-	      this.add(new Kaykay.Card(this));
-	
-	      if (++x === 10) {
-	        window.clearInterval(intervalID);
-	      }
-	    }.bind(this), 200);
 	  };
 	
 	  Game.prototype.addWeapons = function () {
