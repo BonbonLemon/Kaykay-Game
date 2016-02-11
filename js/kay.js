@@ -4,12 +4,13 @@
   }
 
   var Kay = Kaykay.Kay = function (game) {
-    this.pos = [0, 0];
+    this.pos = [300, 350];
     this.dir = [0, 0];
     this.game = game;
+    this.image = "./images/kay.png"
+
     var canvas = document.getElementById("canvas");
     this.ctx = canvas.getContext("2d");
-    this.image = "./images/kay.png"
   }
 
   Kay.prototype.bindMovement = function () {
@@ -48,10 +49,6 @@
 
       }
     }.bind(this);
-
-    setInterval(function () {
-      this.move();
-    }.bind(this), 30)
   };
 
   Kay.prototype.move = function () {
@@ -70,7 +67,7 @@
     } else if (this.pos[1] > 490) {
       this.pos[1] = 10
     }
-    
+
     this.render();
   };
 
