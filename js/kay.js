@@ -7,7 +7,7 @@
     this.pos = [300, 350];
     this.dir = [0, 0];
     this.gameView = gameView;
-    this.image = "./images/kay.png"
+    this.image = "./images/kay_.png"
 
     this.topBound = 260;
     this.bottomBound = 450;
@@ -64,7 +64,7 @@
   };
 
   Kay.prototype.move = function () {
-    this.ctx.clearRect(this.pos[0], this.pos[1], 75, 140);
+    this.ctx.clearRect(this.pos[0], this.pos[1], 120, 150);
     if (!(this.dir[0] < 0 && this.pos[0] < this.leftBound ||
           this.dir[0] > 0 && this.pos[0] > this.rightBound)) {
       this.pos[0] += this.dir[0];
@@ -78,7 +78,7 @@
       this.pos[0] = 710;
       this.gameView.position[0]--;
       this.gameView.updateBackground();
-    } else if (this.pos[0] > 750) {
+    } else if (this.pos[0] > 710) {
       this.pos[0] = 10;
       this.gameView.position[0]++;
       this.gameView.updateBackground();
@@ -100,6 +100,6 @@
   Kay.prototype.render = function () {
     var imageObj = new Image();
     imageObj.src = this.image;
-    this.ctx.drawImage(imageObj, this.pos[0], this.pos[1]);
+    this.ctx.drawImage(imageObj, this.pos[0], this.pos[1], 120, 150);
   };
 })();

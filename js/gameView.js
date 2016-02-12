@@ -31,11 +31,11 @@
     // }.bind(this);
     this.canvas.style.background = "url(./images/start.png)";
 
-    var kay = new Image();
-    kay.src = this.kay.image;
-    kay.onload = function () {
-      this.ctx.drawImage(kay, this.kay.pos[0], this.kay.pos[1]);
-    }.bind(this);
+    // var kay = new Image();
+    // kay.src = this.kay.image;
+    // kay.onload = function () {
+    //   this.ctx.drawImage(kay, this.kay.pos[0], this.kay.pos[1]);
+    // }.bind(this);
 
     this.kay.bindMovement();
 
