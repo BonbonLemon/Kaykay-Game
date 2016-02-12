@@ -42,7 +42,7 @@
     setInterval(function () {
       // this.ctx.drawImage(background, 0, 0);
       this.kay.move();
-    }.bind(this), 30);
+    }.bind(this), 10);
   };
 
   GameView.prototype.updateBackground = function () {
@@ -54,7 +54,7 @@
         this.kay.leftBound = 300;
         this.canvas.style.background = "url(./images/start.png)";
         break;
-      case "11,10":
+      case "11,10": // NOTE: CCross road
         this.kay.resetBounds();
         this.canvas.style.background = "url(./images/11_10.png)";
         break;
@@ -67,6 +67,37 @@
         this.kay.leftBound = 250;
         this.kay.rightBound = 400;
         this.canvas.style.background = "url(./images/11_8.png)";
+        break;
+      case "11,7":
+        this.kay.resetBounds();
+        this.kay.leftBound = 200;
+        this.kay.topBound = 0;
+        this.canvas.style.background = "url(./images/11_7.png)";
+        break;
+      case "12,7":
+        this.kay.resetBounds();
+        this.kay.bottomBound = 360;
+        this.kay.rightBound = 550;
+        this.canvas.style.background = "url(./images/12_7.png)";
+        break;
+      case "12,6":
+        this.kay.resetBounds();
+        this.kay.topBound = 0;
+        this.kay.rightBound = 350;
+        this.canvas.style.background = "url(./images/12_6.png)";
+        break;
+      case "11,6":
+        this.kay.resetBounds();
+        this.kay.bottomBound = 430;
+        this.kay.leftBound = 0;
+        this.canvas.style.background = "url(./images/11_6.png)";
+        break;
+      case "11,5":
+        this.kay.resetBounds();
+        this.kay.topBound = 0;
+        this.kay.leftBound = 0;
+        this.kay.rightBound = 290;
+        this.canvas.style.background = "url(./images/11_5.png)";
         break;
       default:
 
