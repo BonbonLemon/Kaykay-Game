@@ -49,12 +49,20 @@
     // this.canvas.style.background;
     switch (this.position.toString()) {
       case "10,10":
-        
+        this.kay.topBound = 260;
+        this.kay.bottomBound = 450;
+        this.kay.leftBound = 300;
         this.canvas.style.background = "url(./images/start.png)";
         break;
       case "11,10":
         this.kay.resetBounds();
         this.canvas.style.background = "url(./images/11_10.png)";
+        break;
+      case "11,9":
+        this.kay.leftBound = 0;
+        this.kay.rightBound = 720;
+        this.canvas.style.background = "url(./images/11_9.png)";
+        break;
       default:
 
     }

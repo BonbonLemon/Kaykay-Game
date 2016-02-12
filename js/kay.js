@@ -86,8 +86,12 @@
 
     if (this.pos[1] < -35) {
       this.pos[1] = 450;
+      this.gameView.position[1]--;
+      this.gameView.updateBackground();
     } else if (this.pos[1] > 490) {
       this.pos[1] = 10
+      this.gameView.position[1]++;
+      this.gameView.updateBackground();
     }
 
     this.render();
