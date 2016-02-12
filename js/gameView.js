@@ -3,13 +3,14 @@
     window.Kaykay = {};
   }
 
-  var GameView = Kaykay.GameView = function (game, ctx) {
+  var GameView = Kaykay.GameView = function (ctx) {
     this.canvas = document.getElementById("canvas");
     this.ctx = ctx;
-    this.game = game;
-    this.position = [0, 0];
-    this.kay = game.kay;
+    this.position = [10, 10];
+    this.kay = new Kaykay.Kay(this);
   };
+
+  NOBOUNDS = -1000;
 
   GameView.prototype.bindStart = function () {
     document.onkeydown = function (e) {
@@ -28,7 +29,7 @@
     // background.onload = function () {
     //   this.ctx.drawImage(background, 0, 0);
     // }.bind(this);
-    this.canvas.style.backgroundImage = "url(./images/start.png)"
+    this.canvas.style.background = "url(./images/start.png)";
 
     var kay = new Image();
     kay.src = this.kay.image;
@@ -42,5 +43,20 @@
       // this.ctx.drawImage(background, 0, 0);
       this.kay.move();
     }.bind(this), 30);
+  };
+
+  GameView.prototype.updateBackground = function () {
+    // this.canvas.style.background;
+    switch (this.position.toString()) {
+      case "10,10":
+        
+        this.canvas.style.background = "url(./images/start.png)";
+        break;
+      case "11,10":
+        this.kay.resetBounds();
+        this.canvas.style.background = "url(./images/11_10.png)";
+      default:
+
+    }
   };
 })();

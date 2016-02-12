@@ -3,32 +3,44 @@
     window.Kaykay = {};
   }
 
-  var Kay = Kaykay.Kay = function (game) {
+  var Kay = Kaykay.Kay = function (gameView) {
     this.pos = [300, 350];
     this.dir = [0, 0];
-    this.game = game;
+    this.gameView = gameView;
     this.image = "./images/kay.png"
+
+    this.topBound = 260;
+    this.bottomBound = 450;
+    this.leftBound = 300;
+    this.rightBound = 1000;
 
     var canvas = document.getElementById("canvas");
     this.ctx = canvas.getContext("2d");
   }
 
+  Kay.prototype.resetBounds = function () {
+    this.topBound = -1000;
+    this.bottomBound = 1000;
+    this.leftBound = -1000;
+    this.rightBound = 1000;
+  };
+
   Kay.prototype.bindMovement = function () {
     document.onkeydown = function (e) {
       switch (e.which) {
-        case 37:
+        case 37: // Left
           this.dir[0] = -6;
           break;
-        case 38:
+        case 38: // Up
           this.dir[1] = -4;
           break;
-        case 39:
+        case 39: // Right
           this.dir[0] = 6;
           break;
-        case 40:
+        case 40: // Down
           this.dir[1] = 4;
           break;
-        case 32:
+        case 32: // Space
           console.log(this.pos);
         default:
 
@@ -53,13 +65,23 @@
 
   Kay.prototype.move = function () {
     this.ctx.clearRect(this.pos[0], this.pos[1], 75, 140);
-    this.pos[0] += this.dir[0];
-    this.pos[1] += this.dir[1];
+    if (!(this.dir[0] < 0 && this.pos[0] < this.leftBound ||
+          this.dir[0] > 0 && this.pos[0] > this.rightBound)) {
+      this.pos[0] += this.dir[0];
+    }
+    if (!(this.dir[1] < 0 && this.pos[1] < this.topBound ||
+        this.dir[1] > 0 && this.pos[1] > this.bottomBound)) {
+      this.pos[1] += this.dir[1];
+    }
 
     if (this.pos[0] < -25) {
       this.pos[0] = 710;
+      this.gameView.position[0]--;
+      this.gameView.updateBackground();
     } else if (this.pos[0] > 750) {
       this.pos[0] = 10;
+      this.gameView.position[0]++;
+      this.gameView.updateBackground();
     }
 
     if (this.pos[1] < -35) {
