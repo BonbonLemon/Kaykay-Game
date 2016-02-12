@@ -75,7 +75,7 @@
     }
 
     if (this.pos[0] < -25) {
-      this.pos[0] = 710;
+      this.pos[0] = 680;
       this.gameView.position[0]--;
       this.gameView.updateBackground();
     } else if (this.pos[0] > 710) {

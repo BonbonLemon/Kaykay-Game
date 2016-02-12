@@ -60,8 +60,13 @@
         break;
       case "11,9":
         this.kay.leftBound = 0;
-        this.kay.rightBound = 720;
+        this.kay.rightBound = 680;
         this.canvas.style.background = "url(./images/11_9.png)";
+        break;
+      case "11,8":
+        this.kay.leftBound = 250;
+        this.kay.rightBound = 400;
+        this.canvas.style.background = "url(./images/11_8.png)";
         break;
       default:
 
