@@ -99,6 +99,42 @@
         this.kay.rightBound = 290;
         this.canvas.style.background = "url(./images/11_5.png)";
         break;
+      case "11,11": // NOTE: Park start
+        this.kay.resetBounds();
+        this.kay.leftBound = 0;
+        this.kay.rightBound = 390;
+        this.canvas.style.background = "url(./images/11_11.png)";
+        break;
+      case "11,12":
+        this.kay.resetBounds();
+        this.kay.bottomBound = 430;
+        this.canvas.style.background = "url(./images/11_12.png)";
+        break;
+      case "10,12":
+        this.kay.resetBounds();
+        this.kay.topBound = 0;
+        this.kay.bottomBound = 430;
+        this.canvas.style.background = "url(./images/10_12.png)";
+        break;
+      case "9,12":
+        this.kay.resetBounds();
+        this.kay.topBound = 0;
+        this.kay.bottomBound = 430;
+        this.canvas.style.background = "url(./images/9_12.png)";
+        break;
+      case "8,12":
+        this.kay.resetBounds();
+        this.kay.topBound = 0;
+        this.kay.bottomBound = 430;
+        this.canvas.style.background = "url(./images/8_12.png)";
+        break;
+      case "7,12":
+        this.kay.resetBounds();
+        this.kay.topBound = 0;
+        this.kay.bottomBound = 430;
+        this.kay.leftBound = 0;
+        this.canvas.style.background = "url(./images/7_12.png)";
+        break;
       default:
 
     }
