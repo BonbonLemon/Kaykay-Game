@@ -29,16 +29,16 @@
     document.onkeydown = function (e) {
       switch (e.which) {
         case 37: // Left
-          this.dir[0] = -6;
+          this.dir[0] = -3;
           break;
         case 38: // Up
-          this.dir[1] = -6;
+          this.dir[1] = -2;
           break;
         case 39: // Right
-          this.dir[0] = 6;
+          this.dir[0] = 3;
           break;
         case 40: // Down
-          this.dir[1] = 6;
+          this.dir[1] = 2;
           break;
         case 32: // Space
           console.log(this.pos);
