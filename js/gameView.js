@@ -160,6 +160,19 @@
         this.kay.rightBound = 630;
         this.canvas.style.background = "url(./images/15_12.png)";
         break;
+      case "12,10": // NOTE: Lunch
+        this.kay.resetBounds();
+        this.kay.topBound = 0;
+        this.kay.bottomBound = 430;
+        this.canvas.style.background = "url(./images/12_10.png)";
+        break;
+      case "13,10":
+        this.kay.resetBounds();
+        this.kay.topBound = 220;
+        this.kay.bottomBound = 430;
+        this.kay.rightBound = 600;
+        this.canvas.style.background = "url(./images/13_10.png)";
+        break;
       default:
 
     }
