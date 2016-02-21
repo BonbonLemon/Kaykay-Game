@@ -110,7 +110,7 @@
         this.kay.bottomBound = 430;
         this.canvas.style.background = "url(./images/11_12.png)";
         break;
-      case "10,12":
+      case "10,12": // NOTE: Left park
         this.kay.resetBounds();
         this.kay.topBound = 0;
         this.kay.bottomBound = 430;
@@ -134,6 +134,31 @@
         this.kay.bottomBound = 430;
         this.kay.leftBound = 0;
         this.canvas.style.background = "url(./images/7_12.png)";
+        break;
+      case "12,12": // NOTE: Right park
+        this.kay.resetBounds();
+        this.kay.topBound = 0;
+        this.kay.bottomBound = 430;
+        this.canvas.style.background = "url(./images/12_12.png)";
+        break;
+      case "13,12":
+        this.kay.resetBounds();
+        this.kay.topBound = 180;
+        this.kay.bottomBound = 430;
+        this.canvas.style.background = "url(./images/13_12.png)";
+        break;
+      case "14,12":
+        this.kay.resetBounds();
+        this.kay.topBound = 0;
+        this.kay.bottomBound = 430;
+        this.canvas.style.background = "url(./images/14_12.png)";
+        break;
+      case "15,12":
+        this.kay.resetBounds();
+        this.kay.topBound = 80;
+        this.kay.bottomBound = 430;
+        this.kay.rightBound = 630;
+        this.canvas.style.background = "url(./images/15_12.png)";
         break;
       default:
 
